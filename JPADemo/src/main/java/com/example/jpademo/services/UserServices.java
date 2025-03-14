@@ -7,6 +7,7 @@ import com.example.jpademo.model.Users;
 import com.example.jpademo.repo.UserRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserServices {
@@ -24,6 +25,10 @@ public class UserServices {
 
     public void deleteUser(Long id) {
         userRepository.deleteById(id);
+    }
+
+    public Optional<Users> findById(Long id) {
+        return userRepository.findById(id);
     }
 }
 
