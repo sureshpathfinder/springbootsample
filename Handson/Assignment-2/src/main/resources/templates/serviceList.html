@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset="UTF-8" />
+      <title>HDFC BANK in Bangalore</title>
+      <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+   </head>
+   <body>
+      <h1>Welcome To HDFC Bank </h1>
+      <h2>Bank Service List</h2>
+      <br/><br/>
+      <div>
+         <table border="1">
+            <tr>
+               <th>ID</th>
+               <th>Service Name</th>
+            </tr>
+            <tr th:each ="service : ${services}">
+               <td th:utext="${service.id}">...</td>
+               <td th:utext="${service.name}">...</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>
